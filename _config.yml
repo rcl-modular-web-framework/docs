@@ -1,0 +1,8 @@
+title: Modular Web Framework
+description: The Modular Web Framework (MWF) allows you to create modular web applications with the .NET framework.
+theme: just-the-docs
+
+url: https://mwf.rclapp.com
+
+aux_links:
+  Template Repository: https://github.com/rcl-modular-web-framework/docs
