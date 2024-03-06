@@ -8,19 +8,23 @@ parent: Module
 
 # Module Service
 
-Modules will communicates with other modules through public services. A service is provided through and Interface and Extension so that it can be injected through dependency injection.
+Modules will communicates with other modules and to the web application through public services. A service is provided through and Interface and Extension so that it can be used through dependency injection.
 
 Services are created in a class library project with the following naming convention  {project-name}.Core, eg. ``RCL.MWF.Subscription.Core``
 
-Services and their interfaces should be stored in a folder named ``Services`` in the project.
+Services and the interfaces should be stored in a folder named ``Services`` in the project.
 
 ## Listing Services
 
-The public services provided by the module must be listed on the README.md file in the module's solution.
+The services provided by the module must be listed on the README.md file in the module's solution.
 
 ## Service Environment Variables
 
-Environment variables must be provided to services using the ``Options`` pattern in ASP.NET. The classes used to store the variables must be listed in the module's README.md.
+Environment variables must be provided to services using the ``Options`` pattern. The classes used to store the variables must be listed in the module's README.md. The classes must be stored in a folder named ``Options``.
+
+## External Products or Subscriptions
+
+If a service requires a subscription or uses an external product to operate, the product and a website link should be provided in the module's README.md page.
 
 ## Exposing the Services
 
@@ -28,12 +32,16 @@ Services are exposed publicly using extensions and through ``Dependency Injectio
 
 ## Injecting Services
 
-Services are injected in the ``Program.cs`` of a web application or function app. Other methods can also be used to inject the services in applications or for testing.
+Services are injected in the ``Program.cs`` of a web application. Other methods can also be used to inject the services in other types of applications or for testing.
 
-Example code must be provided on how to inject the service in an application.
+Example code must be provided on how to inject the service.
+
+## Helper Classes
+
+The service may provide helper classes. These classes are usually static classes and must be stored in a folder named ``Helpers``. A list of helpers classes must be provided in the README.md file of the module.
 
 ## NuGet Packages
 
-The service can be made public via a NuGet package. NuGet packages can be publicly hosted on NuGet or privately in on-premise servers or private cloud.
+The service must be made available via a NuGet package. NuGet packages can be publicly hosted on NuGet or privately in on-premise servers or private cloud.
 
 The name and version of the NuGet package must be specified in the module's README.md file.
