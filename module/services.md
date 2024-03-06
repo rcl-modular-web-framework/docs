@@ -22,6 +22,10 @@ The services provided by the module must be listed on the README.md file in the 
 
 Environment variables must be provided to services using the ``Options`` pattern. The classes used to store the variables must be listed in the module's README.md. The classes must be stored in a folder named ``Options``.
 
+## External Products or Subscriptions
+
+If a service requires a subscription or uses an external product to operate, the product and a website link should be provided in the module's README.md page.
+
 ## Exposing the Services
 
 Services are exposed publicly using extensions and through ``Dependency Injection``. The extension must be created a folder named ``Extensions``.
